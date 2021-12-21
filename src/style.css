@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* ############ General Styling ############ */
 body {
   font-family: 'Roboto', sans-serif;
@@ -36,18 +37,20 @@ footer {
   font-size: 1.3em;
   font-weight: 500;
 }
+
 /* ############ Styling ############ */
-.navbar{
-height: 80px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-size: 1.5em;
-font-weight: bold;
-/* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
 }
 
-.navLinks{
+.navLinks {
   display: flex;
   gap: 50px;
 }
@@ -55,4 +58,3 @@ font-weight: bold;
 .logo {
   color: #e02a0f;
 }
-
