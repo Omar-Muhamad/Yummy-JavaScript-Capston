@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "fixlinters": "npx stylelint \"**/*.{css,scss}\" --fix && npx eslint . --fix && npx hint ."
   },
   "repository": {
     "type": "git",
