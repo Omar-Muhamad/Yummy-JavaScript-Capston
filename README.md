@@ -37,7 +37,7 @@
 - Twitter: [@Eng_OmarMuhamad](https://twitter.com/Eng_OmarMuhamad)
 - LinkedIn: [@eng-omarmuhammad](https://www.linkedin.com/in/eng-omarmuhammad/)
 
-👤 **Kerolous Samy**
+👨‍💻 **Kerolous Samy**
 
 - GitHub: [@keroloussamy](https://github.com/keroloussamy)
 - Twitter: [@kerolous_samy](https://twitter.com/kerolous_samy)
