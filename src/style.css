@@ -8,8 +8,6 @@
 /* ############ General Styling ############ */
 body {
   font-family: 'Roboto', sans-serif;
-  max-width: 1100px;
-  width: 80%;
   margin: 0 auto;
   position: relative;
   height: 100vh;
@@ -43,8 +41,6 @@ footer {
   align-items: center;
   font-size: 1.5em;
   font-weight: bold;
-
-  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
 }
 
 .navLinks {
@@ -54,4 +50,67 @@ footer {
 
 .logo {
   color: #e02a0f;
+}
+
+.popComment {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.mealContainer {
+  z-index: 3;
+  width: 60%;
+  height: 90%;
+  padding: 30px 0;
+  background: #d9b327;
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.closeBtn {
+  margin-right: 30px;
+  color: #000;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b1b1b1;
+}
+
+.mealThump {
+  width: 40%;
+}
+
+.mealThump img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.mealDetails {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
 }

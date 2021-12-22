@@ -13,7 +13,7 @@ const displayMeals = () => {
     <div class="col-md-4 col-sm-6 text-center pb-5" data-id=${item.idMeal}>
       <img class="img-thumbnail rounded" src=${item.strMealThumb} alt=${item.strMeal}>
       <h3 class="py-2">${item.strMeal}</h3>
-      <button class="btn btn-primary m-2">Comments</button>
+      <button class="btn btn-primary m-2 commentBtn">Comments</button>
       <button class="btn btn-primary">Reservations</button>
     </div>
     `;
