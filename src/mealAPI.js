@@ -20,7 +20,8 @@ const displayMeals = () => {
         <p class="likes text-end"></p>
         <i class="fas fa-heart fs-4 text-danger"></i>
       </div>
-      <button class="btn btn-primary m-2">Comments</button>
+      <p class="likes text-end me-2"></p>
+      <button class="btn btn-primary m-2 commentBtn">Comments</button>
       <button class="btn btn-primary">Reservations</button>
     </div>
     `;
