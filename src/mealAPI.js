@@ -14,7 +14,7 @@ const displayMeals = () => {
       <img class="img-thumbnail rounded" src=${item.strMealThumb} alt=${item.strMeal}>
       <h5 class="py-2">${item.strMeal}</h5>
       <p class="likes text-end me-2"></p>
-      <button class="btn btn-primary m-2">Comments</button>
+      <button class="btn btn-primary m-2 commentBtn">Comments</button>
       <button class="btn btn-primary">Reservations</button>
     </div>
     `;
