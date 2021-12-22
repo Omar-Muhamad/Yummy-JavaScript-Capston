@@ -14,4 +14,3 @@ main.addEventListener('click', (event) => {
     renderComment(mealID);
   }
 });
-
