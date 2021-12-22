@@ -1,6 +1,10 @@
 import './style.css';
 import mealApi from './mealAPI.js';
 import { renderComment } from './popComment.js';
+import involementApi from './involvementAPI.js';
+
+mealApi.displayMeals();
+involementApi.displayLikes();
 
 const main = document.querySelector('main');
 main.addEventListener('click', (event) => {
@@ -10,5 +14,3 @@ main.addEventListener('click', (event) => {
     renderComment(mealID);
   }
 });
-
-mealApi.displayMeals();
