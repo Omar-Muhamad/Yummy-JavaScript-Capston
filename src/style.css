@@ -114,3 +114,17 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+
+.comments {
+  text-align: center;
+}
+
+.comment {
+  display: flex;
+  gap: 10px;
+}
+
+.commentText {
+  display: flex;
+  gap: 3px;
+}

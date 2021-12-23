@@ -5,7 +5,7 @@ const getMeal = async (mealID) => {
   return data.meals;
 };
 
-const renderComment = async (mealID) => {
+const renderPopComment = async (mealID) => {
   const mealArr = await getMeal(mealID);
   const meal = mealArr[0];
   const body = document.querySelector('body');
@@ -21,6 +21,7 @@ const renderComment = async (mealID) => {
         <p class="mealCategory">Category: ${meal.strCategory}</p>
         <p class="mealArea">Country: ${meal.strArea}</p>
       </div>
+      <div class="comments" id="comments"></div>
     </div>
     `;
   const popComment = document.createElement('section');
@@ -35,4 +36,4 @@ const renderComment = async (mealID) => {
   body.appendChild(popComment);
 };
 
-module.exports = { renderComment };
+export default { renderPopComment };
