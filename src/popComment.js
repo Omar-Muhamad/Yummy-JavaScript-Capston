@@ -22,6 +22,11 @@ const renderPopComment = async (mealID) => {
         <p class="mealArea">Country: ${meal.strArea}</p>
       </div>
       <div class="comments" id="comments"></div>
+      <form class="addComment" id="addComment" action="submit">
+        <input type="text" name="userName" class="userName" id="userName" placeholder="Your name" required>
+        <textarea type="text" name="messege" class="commentMsg" id="commentMsg" placeholder="Add your comment here" required></textarea>
+        <input type="submit" class="CommentBtn" id="CommentBtn">Comment</input>
+      </form>
     </div>
     `;
   const popComment = document.createElement('section');

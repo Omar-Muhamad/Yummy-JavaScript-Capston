@@ -43,6 +43,16 @@ const getComments = async (mealID) => {
   return data;
 };
 
+const postComment = (inputData) => {
+  fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lCNzVmZgTty5Cce1TAf3/comments', {
+    method: 'POST',
+    body: JSON.stringify(inputData),
+    headers: { 'Content-type': 'application/json; charset=UTF-8' },
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+};
+
 const renderComments = async (mealID) => {
   const commentsArr = await getComments(mealID);
 
@@ -66,4 +76,22 @@ const renderComments = async (mealID) => {
   });
 };
 
-export default { displayLikes, updateLikes, renderComments };
+const addComment = (mealID) => {
+  const commentForm = document.getElementById('addComment');
+  const userName = document.getElementById('userName');
+  const commentMsg = document.getElementById('commentMsg');
+
+  commentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const inputData = {
+      item_id: mealID,
+      username: userName.value,
+      comment: commentMsg.value,
+    };
+    postComment(inputData);
+  });
+};
+
+export default {
+  displayLikes, updateLikes, renderComments, addComment,
+};

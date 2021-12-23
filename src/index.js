@@ -13,5 +13,6 @@ main.addEventListener('click', (event) => {
     const mealID = parent.dataset.id;
     popComment.renderPopComment(mealID);
     involementApi.renderComments(mealID);
+    involementApi.addComment(mealID);
   }
 });
