@@ -5,15 +5,11 @@ async function fetchLikes() {
   return response.json();
 }
 
-const displayLikes = () => {
-  fetchLikes()
-    .then((data) => {
-      for (let i = 0; i < 6; i += 1) {
-        const parent = document.querySelector(`[data-id="${data[i].item_id}"]`);
-        const paragraph = parent.querySelector('.likes');
-        paragraph.textContent = `Likes ${data[i].likes}`;
-      }
-    });
+const getMeal = async (mealID) => {
+  const mealURL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`;
+  const response = await fetch(mealURL);
+  const data = await response.json();
+  return data.meals;
 };
 
 async function postLikes(likeObj) {
@@ -26,14 +22,6 @@ async function postLikes(likeObj) {
   });
   return response;
 }
-
-const updateLikes = (event) => {
-  const itemId = event.target.parentElement.parentElement.getAttribute('data-id');
-  postLikes({ item_id: itemId })
-    .then(() => {
-      displayLikes();
-    });
-};
 
 // ############# Comments Utils ############
 const getComments = async (mealID) => {
@@ -49,8 +37,8 @@ const postComment = (inputData) => {
     body: JSON.stringify(inputData),
     headers: { 'Content-type': 'application/json; charset=UTF-8' },
   })
-  .then(response => response.json())
-  .then(data => console.log(data))
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 };
 
 const renderComments = async (mealID) => {
@@ -91,7 +79,6 @@ const addComment = (mealID) => {
     postComment(inputData);
   });
 };
-
-export default {
-  displayLikes, updateLikes, renderComments, addComment,
+export {
+  fetchLikes, postLikes, postComment, getComments, getMeal,
 };

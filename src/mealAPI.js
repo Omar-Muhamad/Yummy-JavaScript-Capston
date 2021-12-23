@@ -29,6 +29,7 @@ const displayMeals = () => {
       document.querySelector('main').innerHTML = html;
       const hearts = document.querySelectorAll('.fa-heart');
       [...hearts].forEach((heart) => { heart.addEventListener('click', involementApi.updateLikes); });
+      displayLikes();
     })
     .catch((error) => {
       document.querySelector('main').innerHTML = error;
