@@ -87,5 +87,5 @@ const displayDataLength = (categoryName) => {
 };
 
 export {
-  displayMeals, displayDataLength, displayLikes, displayCategories,
+  displayMeals, displayDataLength, displayLikes, displayCategories, fetchMeals,
 };
