@@ -8,10 +8,12 @@ async function fetchLikes() {
 const displayLikes = () => {
   fetchLikes()
     .then((data) => {
-      for (let i = 0; i < 6; i += 1) {
+      for (let i = 0; i < data.length; i += 1) {
         const parent = document.querySelector(`[data-id="${data[i].item_id}"]`);
-        const paragraph = parent.querySelector('.likes');
-        paragraph.textContent = `Likes ${data[i].likes}`;
+        if (parent) {
+          const paragraph = parent.querySelector('.likes');
+          paragraph.textContent = `Likes ${data[i].likes}`;
+        }
       }
     });
 };
