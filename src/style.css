@@ -14,15 +14,6 @@ body {
   background-color: #d9b327;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: #e02a0f;
-}
-
 ul {
   list-style: none;
 }
@@ -41,22 +32,8 @@ form {
 }
 
 /* ############ Styling ############ */
-.navbar {
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.navLinks {
-  display: flex;
-  gap: 50px;
-}
-
-.logo {
-  color: #e02a0f;
+nav {
+  background-color: #adefd1ff;
 }
 
 .popComment {
