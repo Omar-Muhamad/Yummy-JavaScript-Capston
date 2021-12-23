@@ -35,4 +35,35 @@ const updateLikes = (event) => {
     });
 };
 
-export default { displayLikes, updateLikes };
+// ############# Comments Utils ############
+const getComments = async (mealID) => {
+  const CommentsURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lCNzVmZgTty5Cce1TAf3/comments?item_id=${mealID}`;
+  const response = await fetch(CommentsURL);
+  const data = await response.json();
+  return data;
+};
+
+const renderComments = async (mealID) => {
+  const commentsArr = await getComments(mealID);
+
+  const commentsDiv = document.querySelector('#comments');
+  const commentCounth3 = document.createElement('h3');
+  commentCounth3.classList = 'commentCount';
+  commentCounth3.innerHTML = `Comments (${commentsArr.length})`;
+  commentsDiv.appendChild(commentCounth3);
+  commentsArr.forEach((comment) => {
+    const commentDiv = document.createElement('div');
+    commentDiv.classList = 'comment';
+    const commentData = `
+      <p class="commentDate">${comment.creation_date}</p>
+      <div class="commentText">
+        <p class="userName">${comment.username}:</p>
+        <p class="commentDetails">${comment.comment}</p>
+      </div>
+    `;
+    commentDiv.innerHTML = commentData;
+    commentsDiv.appendChild(commentDiv);
+  });
+};
+
+export default { displayLikes, updateLikes, renderComments };
