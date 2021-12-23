@@ -1,39 +1,9 @@
-import { fetchLikes, postLikes, postComment } from './involvementAPI.js'
-const addComment = (mealID) => {
-  const commentForm = document.getElementById('addComment');
-  const userName = document.getElementById('userName');
-  const commentMsg = document.getElementById('commentMsg');
-  commentForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const inputData = {
-      item_id: mealID,
-      username: userName.value,
-      comment: commentMsg.value,
-    };
-    postComment(inputData);
-  });
-};
+import { getComments, postComment, getMeal } from './API.js';
 
-const displayLikes = () => {
-  fetchLikes()
-    .then((data) => {
-      for (let i = 0; i < 6; i += 1) {
-        const parent = document.querySelector(`[data-id="${data[i].item_id}"]`);
-        const paragraph = parent.querySelector('.likes');
-        paragraph.textContent = `Likes ${data[i].likes}`;
-      }
-    });
-};
-const updateLikes = (event) => {
-  const itemId = event.target.parentElement.parentElement.getAttribute('data-id');
-  postLikes({ item_id: itemId })
-    .then(() => {
-      displayLikes();
-    });
-};
 const renderComments = async (mealID) => {
   const commentsArr = await getComments(mealID);
   const commentsDiv = document.querySelector('#comments');
+  commentsDiv.innerHTML = '';
   const commentCounth3 = document.createElement('h3');
   commentCounth3.classList = 'commentCount';
   commentCounth3.innerHTML = `Comments (${commentsArr.length})`;
@@ -52,7 +22,23 @@ const renderComments = async (mealID) => {
     commentsDiv.appendChild(commentDiv);
   });
 };
-const renderPopComment = async (mealID) => {
+
+const addComment = (mealID) => {
+  const commentForm = document.getElementById('addComment');
+  const userName = document.getElementById('userName');
+  const commentMsg = document.getElementById('commentMsg');
+
+  commentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const inputData = {
+      item_id: mealID,
+      username: userName.value,
+      comment: commentMsg.value,
+    };
+    postComment(inputData, () => renderComments(mealID));
+  });
+};
+const renderCommentsPopup = async (mealID) => {
   const mealArr = await getMeal(mealID);
   const meal = mealArr[0];
   const body = document.querySelector('body');
@@ -84,9 +70,9 @@ const renderPopComment = async (mealID) => {
     popComment.parentElement.removeChild(popComment);
     body.style.overflow = 'scroll';
   });
-
   body.style.overflow = 'hidden';
   body.appendChild(popComment);
+  renderComments(mealID);
+  addComment(mealID);
 };
-
-export default { renderPopComment };
+export default renderCommentsPopup;
