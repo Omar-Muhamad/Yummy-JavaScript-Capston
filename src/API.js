@@ -1,13 +1,19 @@
 const likeURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lCNzVmZgTty5Cce1TAf3/likes/';
 
-async function fetchMeals() {
-  const URL = 'https://www.themealdb.com/api/json/v1/1/search.php?f=b';
+async function fetchMeals(categoryName) {
+  const URL = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`;
   const response = await fetch(URL);
   return response.json();
 }
 
 async function fetchLikes() {
   const response = await fetch(likeURL);
+  return response.json();
+}
+
+async function fetchCategories() {
+  const URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+  const response = await fetch(URL);
   return response.json();
 }
 
@@ -49,5 +55,5 @@ const postComment = (inputData, onSuccess) => {
 };
 
 export {
-  getComments, postComment, postLikes, getMeal, fetchLikes, fetchMeals,
+  getComments, postComment, postLikes, getMeal, fetchLikes, fetchMeals, fetchCategories,
 };
