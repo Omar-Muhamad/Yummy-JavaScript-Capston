@@ -5,6 +5,7 @@ async function fetchMeals() {
   const response = await fetch(URL);
   return response.json();
 }
+
 async function fetchLikes() {
   const response = await fetch(likeURL);
   return response.json();

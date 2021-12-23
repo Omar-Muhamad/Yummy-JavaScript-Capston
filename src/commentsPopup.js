@@ -1,13 +1,17 @@
 import { getComments, postComment, getMeal } from './API.js';
 
+const addCommentCount = (commentsDiv, commentsArr) => {
+  const commentCounth3 = document.createElement('h3');
+  commentCounth3.classList = 'commentCount';
+  commentCounth3.innerHTML = `Comments (${commentsArr.length || 0})`;
+  commentsDiv.appendChild(commentCounth3);
+};
+
 const renderComments = async (mealID) => {
   const commentsArr = await getComments(mealID);
   const commentsDiv = document.querySelector('#comments');
   commentsDiv.innerHTML = '';
-  const commentCounth3 = document.createElement('h3');
-  commentCounth3.classList = 'commentCount';
-  commentCounth3.innerHTML = `Comments (${commentsArr.length})`;
-  commentsDiv.appendChild(commentCounth3);
+  addCommentCount(commentsDiv, commentsArr);
   commentsArr.forEach((comment) => {
     const commentDiv = document.createElement('div');
     commentDiv.classList = 'comment';
@@ -38,12 +42,12 @@ const addComment = (mealID) => {
     postComment(inputData, () => renderComments(mealID));
   });
 };
+
 const renderCommentsPopup = async (mealID) => {
   const mealArr = await getMeal(mealID);
   const meal = mealArr[0];
   const body = document.querySelector('body');
   const mealData = `
-    
     <div class="mealContainer">
       <span class="closeBtn"><i class="far fa-times-circle fa-2x"></i></span>
       <div class="mealThump">
@@ -54,12 +58,15 @@ const renderCommentsPopup = async (mealID) => {
         <p class="mealCategory">Category: ${meal.strCategory}</p>
         <p class="mealArea">Country: ${meal.strArea}</p>
       </div>
-      <div class="comments" id="comments"></div>
-      <form class="addComment" id="addComment" >
-        <input type="text" name="userName" class="userName" id="userName" placeholder="Your name" required>
-        <textarea type="text" name="messege" class="commentMsg" id="commentMsg" placeholder="Add your comment here" required></textarea>
-        <input type="submit" class="CommentBtn" id="CommentBtn">
-      </form>
+      <div class="commentsContainer">
+        <div class="comments" id="comments"></div>
+        <form class="addComment" id="addComment" >
+          <h3>Add a comment</h3>
+          <input type="text" name="userName" class="userName" id="userName" placeholder="Your name" required>
+          <textarea type="text" name="messege" class="commentMsg" id="commentMsg" placeholder="Add your comment here" required></textarea>
+          <input type="submit" value="Add Comment"class="CommentBtn" id="CommentBtn">
+        </form>
+      </div>
     </div>
     `;
   const popComment = document.createElement('section');
@@ -75,4 +82,5 @@ const renderCommentsPopup = async (mealID) => {
   renderComments(mealID);
   addComment(mealID);
 };
+
 export default renderCommentsPopup;
