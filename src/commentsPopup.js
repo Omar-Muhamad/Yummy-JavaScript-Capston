@@ -1,6 +1,6 @@
 import { getComments, postComment, getMeal } from './API.js';
 
-const addCommentCount = (commentsDiv, commentsArr) => {
+export const addCommentCount = (commentsDiv, commentsArr) => {
   const commentCounth3 = document.createElement('h3');
   commentCounth3.classList = 'commentCount';
   commentCounth3.innerHTML = `Comments (${commentsArr.length || 0})`;
@@ -83,4 +83,4 @@ const renderCommentsPopup = async (mealID) => {
   addComment(mealID);
 };
 
-export { renderCommentsPopup, addCommentCount };
+export default renderCommentsPopup;
