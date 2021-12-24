@@ -1,4 +1,5 @@
 import { addCommentCount } from './commentsPopup.js';
+
 jest.mock('./commentsPopup.js');
 
 test('Comment Count', () => {
