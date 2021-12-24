@@ -83,4 +83,4 @@ const renderCommentsPopup = async (mealID) => {
   addComment(mealID);
 };
 
-export default renderCommentsPopup;
+export { renderCommentsPopup, addCommentCount };
