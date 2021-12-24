@@ -4,18 +4,18 @@ const fetchMeals = async (categoryName) => {
   const URL = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`;
   const response = await fetch(URL);
   return response.json();
-}
+};
 
 const fetchLikes = async () => {
   const response = await fetch(likeURL);
   return response.json();
-}
+};
 
 const fetchCategories = async () => {
   const URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
   const response = await fetch(URL);
   return response.json();
-}
+};
 
 const getMeal = async (mealID) => {
   const mealURL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`;
@@ -33,7 +33,7 @@ const postLikes = async (likeObj) => {
     body: JSON.stringify(likeObj),
   });
   return response;
-}
+};
 
 const getComments = async (mealID) => {
   const CommentsURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lCNzVmZgTty5Cce1TAf3/comments?item_id=${mealID}`;
