@@ -6,11 +6,6 @@
 }
 
 /* ############ General Styling ############ */
-html {
-  max-width: 1100px;
-  width: 90%;
-  margin: 0 auto;
-}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -41,9 +36,13 @@ textarea {
   padding: 5px;
 }
 
+li span {
+  color: #fff;
+}
+
 /* ############ Styling ############ */
 nav {
-  background-color: #adefd1ff;
+  background-color: #e02a0f;
 }
 
 .popComment {

@@ -81,7 +81,7 @@ const dataLength = (categoryName) => fetchMeals(categoryName)
 
 const displayDataLength = (categoryName) => {
   dataLength(categoryName).then((data) => {
-    const navItem = document.querySelector('.disabled');
+    const navItem = document.querySelector('.dis');
     navItem.textContent = `${data} ${categoryName} recipes`;
   });
 };
