@@ -2,7 +2,10 @@
 # JavaScript Capstone Project
 ## Description
 This is the JavaScript capstone project.
-We build Meal recipes website based on an external API.
+We build Meal recipes website based on an external API (Meals DB)[https://www.themealdb.com/api.php] and (Involvement API)[https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270].
+The websites is dynamic and build basic single page apps using ES6 syntax, ES6 modules, callbacks, promises and webpack.
+follow Gitflow and perform a code review for a team member.
+
 ## Live Demo Link
 [Website live server](https://omar-muhamad.github.io/JavaScript-Capston-Project/)
 
@@ -26,6 +29,10 @@ We build Meal recipes website based on an external API.
 ## Install
 
 - Install node.js from [HERE](https://nodejs.org/en/).
+
+## Test
+
+- Npm run test
   
 ## Deployment
 

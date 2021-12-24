@@ -79,6 +79,7 @@ const renderCommentsPopup = async (mealID) => {
     body.style.overflow = 'scroll';
   });
   body.style.overflow = 'hidden';
+  document.querySelectorAll('.popComment').forEach((data)=>{(data.remove())})
   body.appendChild(popComment);
   renderComments(mealID);
   addComment(mealID);
