@@ -1,0 +1,145 @@
+/* ############ Reset Styling ############ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ############ General Styling ############ */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+  background-color: #d9b327;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+button {
+  background-color: #8a3a1b;
+}
+
+input,
+textarea {
+  border: 2px solid #8a3a1b;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+li span {
+  color: #fff;
+}
+
+/* ############ Styling ############ */
+nav {
+  background-color: #e02a0f;
+}
+
+.popComment {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.mealContainer {
+  z-index: 3;
+  width: 60%;
+  height: 90%;
+  padding: 30px 0;
+  background: #d9b327;
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.closeBtn {
+  margin-right: 30px;
+  color: #000;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b1b1b1;
+}
+
+.mealThump {
+  width: 40%;
+}
+
+.mealThump img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.mealDetails {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.commentsContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.comments {
+  text-align: center;
+}
+
+.comment {
+  display: flex;
+  gap: 10px;
+}
+
+.addComment {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+}
+
+.commentText {
+  display: flex;
+  gap: 3px;
+}
+
+.CommentBtn {
+  font-size: 1.1em;
+  font-weight: 500;
+}
