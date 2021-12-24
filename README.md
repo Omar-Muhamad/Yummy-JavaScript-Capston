@@ -32,15 +32,15 @@ follow Gitflow and perform a code review for a team member.
 
 ## Test
 
-- Npm run test
+- `Npm run test`
   
 ## Deployment
 
 1. Clone the project using git-bash or Githup Desktop.
 2. Open the project folder with VSCode or any Editor.
 3. Open terminal and navigate to the project folder.
-4. Type npm install.
-5. Type npm start.
+4. Type `npm install`.
+5. Type `npm start`.
 
 ## Authors
 
