@@ -1,17 +1,18 @@
 import { getComments, postComment, getMeal } from './API.js';
 
-export const addCommentCount = (commentsDiv, commentsArr) => {
-  const commentCounth3 = document.createElement('h3');
-  commentCounth3.classList = 'commentCount';
-  commentCounth3.innerHTML = `Comments (${commentsArr.length || 0})`;
-  commentsDiv.appendChild(commentCounth3);
+export const addCommentCount = (commentsArr) => {
+  const commentsCount = commentsArr.length || 0;
+  return commentsCount;
 };
 
 const renderComments = async (mealID) => {
   const commentsArr = await getComments(mealID);
   const commentsDiv = document.querySelector('#comments');
   commentsDiv.innerHTML = '';
-  addCommentCount(commentsDiv, commentsArr);
+  const commentCounth3 = document.createElement('h3');
+  commentCounth3.classList = 'commentCount';
+  commentCounth3.innerHTML = `Comments (${addCommentCount(commentsArr)})`;
+  commentsDiv.appendChild(commentCounth3);
   commentsArr.forEach((comment) => {
     const commentDiv = document.createElement('div');
     commentDiv.classList = 'comment';

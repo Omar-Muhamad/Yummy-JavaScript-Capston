@@ -34,6 +34,7 @@ async function postLikes(likeObj) {
   });
   return response;
 }
+
 const getComments = async (mealID) => {
   const CommentsURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lCNzVmZgTty5Cce1TAf3/comments?item_id=${mealID}`;
   const response = await fetch(CommentsURL);
