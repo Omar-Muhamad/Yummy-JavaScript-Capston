@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# JavaScript Capstone Project
+# Yummy (JavaScript Capstone)
 ## Description
 This is the JavaScript capstone project.
 We build Meal recipes website based on an external API [Meals DB](https://www.themealdb.com/api.php) and [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270).
