@@ -2,8 +2,8 @@
 # JavaScript Capstone Project
 ## Description
 This is the JavaScript capstone project.
-We build Meal recipes website based on an external API (Meals DB)[https://www.themealdb.com/api.php] and (Involvement API)[https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270].
-The websites is dynamic and build basic single page apps using ES6 syntax, ES6 modules, callbacks, promises and webpack.
+We build Meal recipes website based on an external API [Meals DB](https://www.themealdb.com/api.php) and [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270).
+The website is dynamic and builds basic single-page apps using ES6 syntax, ES6 modules, callbacks, promises, and webpack.
 follow Gitflow and perform a code review for a team member.
 
 ## 🚀 Live Demo
@@ -33,15 +33,15 @@ GitHub Pages [live demo link](https://omar-muhamad.github.io/JavaScript-Capston-
 
 ### Key Features
 
-- GitHub workflow is used.
-- GiHub Projects (Kanban board Agile) is used to arrange work load between team members.  
-- Bable.js transpiler and Webpack.js bundler used for development process.
-- REST API consumed to fetch recipes, comment, and likes (get and post).
+- Gitflow workflow is used.
+- GitHub Projects (Kanban board Agile) is used to arrange workload between team members.  
+- Bable.js transpiler and Webpack.js bundler used for the development process.
+- REST API consumed to fetch recipes, comments, and likes (get and post).
 
 
 ## Getting Started
 
-### Prerequisits
+### Prerequisites
 
 - Install [node.js](https://nodejs.org/en/).
   
@@ -49,11 +49,11 @@ GitHub Pages [live demo link](https://omar-muhamad.github.io/JavaScript-Capston-
 
 - Clone the project using git-bash or Githup Desktop.
 - Open the project folder with VSCode or any Editor.
-- Open terminal and navigate to the project folder.
+- Open the terminal and navigate to the project folder.
 
 ### Usage
 
-- Run this command `npm install` to install dependancies.
+- Run this command `npm install` to install dependencies.
 - Run this command `npm start` to start the dev server.
 
 ### Test
@@ -76,7 +76,7 @@ GitHub Pages [live demo link](https://omar-muhamad.github.io/JavaScript-Capston-
 
 ## 🔭 Future Features
 
-- Update the app design and add mobile responsivness
+- Update the app design and add mobile responsiveness.
 
 ## 🤝 Contributing
 
@@ -90,4 +90,4 @@ Give a ⭐️ if you like this project!
 
 ## License
 
-The app is MIT licensed.
+The app is [MIT-licensed](https://github.com/Omar-Muhamad/JavaScript-Capston-Project/blob/main/LICENSE).
