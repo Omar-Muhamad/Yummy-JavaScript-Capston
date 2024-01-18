@@ -6,41 +6,59 @@ We build Meal recipes website based on an external API (Meals DB)[https://www.th
 The websites is dynamic and build basic single page apps using ES6 syntax, ES6 modules, callbacks, promises and webpack.
 follow Gitflow and perform a code review for a team member.
 
-## Live Demo Link
-[Website live server](https://omar-muhamad.github.io/JavaScript-Capston-Project/)
+## 🚀 Live Demo
+
+GitHub Pages [live demo link](https://omar-muhamad.github.io/JavaScript-Capston-Project/).
 
 ## Video Demo
+
 [Video Demo Link](https://drive.google.com/file/d/1IjgiWaM0W9-w2ZkGlV94dh3Td6D9Qcmk/view)
-## Site Screenshots
+
+## Screenshots
 
 ![screenshot](./Screenshot-1.png)
 
 ![screenshot](./Screenshot-2.png)
 
-## Built With
+## 🛠 Built With
+
+### Tech Stack
 
 - JavaScript.
 - HTML.
 - CSS.
-- Webpack.
-- JavaScript.
+- Babel js (Transpiler).
+- Webpack js (Bundler).
 - Linters.
 
-## Install
+### Key Features
 
-- Install node.js from [HERE](https://nodejs.org/en/).
+- GitHub workflow is used.
+- GiHub Projects (Kanban board Agile) is used to arrange work load between team members.  
+- Bable.js transpiler and Webpack.js bundler used for development process.
+- REST API consumed to fetch recipes, comment, and likes (get and post).
 
-## Test
+
+## Getting Started
+
+### Prerequisits
+
+- Install [node.js](https://nodejs.org/en/).
+  
+### Setup
+
+- Clone the project using git-bash or Githup Desktop.
+- Open the project folder with VSCode or any Editor.
+- Open terminal and navigate to the project folder.
+
+### Usage
+
+- Run this command `npm install` to install dependancies.
+- Run this command `npm start` to start the dev server.
+
+### Test
 
 - `Npm run test`
-  
-## Deployment
-
-1. Clone the project using git-bash or Githup Desktop.
-2. Open the project folder with VSCode or any Editor.
-3. Open terminal and navigate to the project folder.
-4. Type `npm install`.
-5. Type `npm start`.
 
 ## Authors
 
@@ -56,6 +74,20 @@ follow Gitflow and perform a code review for a team member.
 - Twitter: [@kerolous_samy](https://twitter.com/kerolous_samy)
 - LinkedIn: [@keroloussamy](https://www.linkedin.com/in/keroloussamy/)
 
+## 🔭 Future Features
+
+- Update the app design and add mobile responsivness
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the issues page.
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## License
+
+The app is MIT licensed.
